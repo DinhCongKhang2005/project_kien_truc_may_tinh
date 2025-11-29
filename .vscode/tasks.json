@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Active Verilog Testbench",
+            "type": "shell",
+            "command": "iverilog",
+            "args": [
+                "-g2012",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "${file}",
+                "src/*.v",
+                "src/Module/*.v",
+                "src/Stage/*.v"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

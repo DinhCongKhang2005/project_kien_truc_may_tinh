@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Verilog Simulation",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "vvp",
+            "args": [
+                "${fileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build Active Verilog Testbench"
+        }
+    ]
+}
